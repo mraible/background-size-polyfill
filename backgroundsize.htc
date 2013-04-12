@@ -178,7 +178,9 @@ function updateBackground( element, expando ) {
 				* expando.backgroundPositionX
 			);
 
-			img.style.left = delta + "px";
+            if ( !isNaN(delta) ) {
+			    img.style.left = delta + "px";
+            }
 
 			if ( curConstrain != prevConstrain ) {
 				img.style.width = "auto";
